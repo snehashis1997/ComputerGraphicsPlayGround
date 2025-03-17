@@ -32,7 +32,7 @@ direction /= np.linalg.norm(direction, axis=-1, keepdims=True)  # Normalize
 # Compute distances using ray marching
 distances = np.array([[ray_march(orig, d) for d in row] for row in direction])
 
-# === Step 4: Display the Rendered Image ===
+# === Step 4: Display the Rendered Image ===#
 plt.imshow(distances, cmap='inferno', extent=[-1, 1, -1, 1])
 plt.colorbar(label="Distance")
 plt.title("2D Ray Marched SDF Sphere")
